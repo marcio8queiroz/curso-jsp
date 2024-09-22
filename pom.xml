@@ -16,7 +16,7 @@
     <dependency>
         <groupId>org.postgresql</groupId>
         <artifactId>postgresql</artifactId>
-        <version>42.5.4</version> <!-- Versão mais recente disponível -->
+        <version>42.5.6</version> <!-- Versão mais recente disponível -->
     </dependency>
     <!-- Outras dependências -->
 
@@ -41,7 +41,7 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.8.1</version>
 				<configuration>
-					<release>15</release>
+					<release>11</release>
 				</configuration>
 			</plugin>
 			<plugin>
