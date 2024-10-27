@@ -27,9 +27,18 @@ public class ServletLogin<RequestDispatcher> extends HttpServlet {
 
     /*Recebe os dados pela url em parametros*/
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		String acao = request.getParameter("acao");
+		
+		if(acao != null && !acao.isEmpty() && acao.equalsIgnoreCase("logout")) {
+			request.getSession().invalidate();// invalida a sessão
+			@SuppressWarnings("unchecked")
+			RequestDispatcher redirecionar = (RequestDispatcher) request.getRequestDispatcher("index.jsp");
+			((jakarta.servlet.RequestDispatcher) redirecionar).forward(request, response);
+		}else {
 		doPost(request, response);
 	}
-
+	}
 	
 	/*recebe os dados enviados por um formulario*/
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
