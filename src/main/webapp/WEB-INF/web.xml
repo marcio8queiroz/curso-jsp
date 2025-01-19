@@ -6,7 +6,7 @@
   </welcome-file-list>
   <servlet>
     <description></description>
-    <display-name>ServletTest</display-name>
+    <display-name>Curso JSP</display-name>
     <servlet-name>ServletTest</servlet-name>
     <servlet-class>servlets.ServletTest</servlet-class>
   </servlet>

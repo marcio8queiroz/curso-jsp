@@ -17,6 +17,7 @@ CREATE TABLE public.model_login
 WITH (
   OIDS=FALSE
 );
+
 ALTER TABLE public.model_login
   OWNER TO postgres;
   
