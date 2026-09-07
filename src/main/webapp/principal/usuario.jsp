@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -40,36 +40,43 @@
 												<!-- Basic Form Inputs card start -->
 												<div class="card">
 													<div class="card-block">
-														<h4 class="sub-title">Cadastro de Usu·rio</h4>
+														<h4 class="sub-title">Cadastro de Usu√°rio</h4>
 
-														     <form class="form-material">
+														     <form class="form-material" action="<%= request.getContextPath() %>/ServletUsuarioController" method="post" accept-charset="UTF-8">
                                                             <div class="form-group form-default">
-                                                                <input type="text" name="footer-email" class="form-control" required="">
+                                                                <input type="text" name="id" id="id" class="form-control" required="" readonly="readonly" value="${modolLogin.id}">
                                                                 <span class="form-bar"></span>
                                                                 <label class="float-label">ID:</label>
                                                             </div>
+                                                            
                                                              <div class="form-group form-default">
-                                                                <input type="text" name="footer-email" class="form-control" required="" >
+                                                                <input type="text" name="nome" id="nome" class="form-control" required="required" value="${modolLogin.nome}" >
                                                                 <span class="form-bar"></span>
                                                                 <label class="float-label">Nome:</label>
                                                             </div>
+                                                            
                                                             <div class="form-group form-default">
-                                                                <input type="text" name="footer-email" class="form-control" required="">
+                                                                <input type="email" name="email" id="email" class="form-control" required="required" autocomplete="off" value="${modolLogin.email}">
                                                                 <span class="form-bar"></span>
-                                                                <label class="float-label">Email</label>
+                                                                <label class="float-label">Email:</label>
                                                             </div>
+                                                            
+                                                             
                                                             <div class="form-group form-default">
-                                                                <input type="password" name="footer-email" class="form-control" required="">
+                                                                <input type="text" name="login" id="login" class="form-control" required="" autocomplete="off" value="${modolLogin.login}">
                                                                 <span class="form-bar"></span>
-                                                                <label class="float-label">Password</label>
+                                                                <label class="float-label">Login:</label>
                                                             </div>
-                                                            <button class="btn btn-primary waves-effect waves-light">Primary Button</button>
-                                                            <button class="btn btn-success btn-round waves-effect waves-light">Success Button</button>
-												            <button class="btn btn-info btn-round waves-effect waves-light">Info Button</button>
-												            <button class="btn btn-warning btn-round waves-effect waves-light">Warning Button</button>
-												            <button class="btn btn-danger btn-round waves-effect waves-light">Danger Button</button>
-												            <button class="btn btn-inverse btn-round waves-effect waves-light">Inverse Button</button>
-												            <button class="btn btn-disabled btn-round disabled waves-effect waves-light">Disabled Button</button>
+                                                            
+                                                            <div class="form-group form-default">
+                                                                <input type="password" name="senha" id="senha" class="form-control" required="" autocomplete="off" value="${modolLogin.senha}">
+                                                                <span class="form-bar"></span>
+                                                                <label class="float-label">Senha:</label>
+                                                            </div>
+                                                            
+                                                            <button class="btn btn-primary waves-effect waves-light">Novo</button>
+                                                            <button class="btn btn-success btn-round waves-effect waves-light">Salvar</button>
+												            <button class="btn btn-info btn-round waves-effect waves-light">Excluir</button>
                                                         </form>
 
 													</div>
